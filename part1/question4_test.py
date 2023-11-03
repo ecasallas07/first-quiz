@@ -7,7 +7,7 @@ def test_question4_pets_older_than_owner():
   with pets_db.get_connection() as con:
     res = con.execute(sql_pets_older_than_owner)
     result = res.fetchone()
-
+  
   assert len(result) == 1
   assert result[0] == 2
 
